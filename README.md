@@ -19,6 +19,14 @@ Create `mixins.<yourmodid>.json` file directly in resources folder.  Example Bel
 }
 ```
 ### Early Mixins
+To load your early mixins you must have a class that implements `IFMLLoadingPlugin`. 
+After implementing said class, in your `MANIFEST` file include the following attributes:
+
+ ```
+FMLCorePluginContainsFMLMod: true
+FMLCorePlugin: fully.qualified.name.to.your.LoadingPlugin
+ ```
+ 
 Create `mixins.<yourmodid>.early.json`.  Have it reference the base refmap.  The mixin package can be the same or different.
 
 ### Late Mixins
